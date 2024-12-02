@@ -1,3 +1,5 @@
+
+
 public class KeywordsDetector {
     public static void main(String[] args) {
         String[] sentences = {
@@ -9,7 +11,7 @@ public class KeywordsDetector {
             "Chatbots are great but must be used carefully",
             "This blockchain-based solution will disrupt the industry",
             "The team showed great Synergy in the last project",
-            "Use simple words without hype and fluff",
+            "Use simple words without hype and fluff","",
             "Our new technology presents a significant paradigm shift",
             "Effective presentations must be clear, concise, and humble"
         };
@@ -21,6 +23,30 @@ public class KeywordsDetector {
     // Iterates through all the sentences.
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
-        // Replace this comment with your code
+        int i = 0;
+        if(sentences == null){
+            System.out.println("");
+            return;
+        }
+        while(sentences.length > i){
+            int counter = 0;
+            String testedSentence =sentences[i];
+            int j = 0;
+            while(keywords.length > j){
+                String checkForKeyWord = keywords[j];
+                if(testedSentence.toLowerCase().contains(checkForKeyWord)){
+                    counter++;
+                }
+                j++;
+            }
+            if(counter > 0){
+                System.out.println(testedSentence);
+                i++;
+            }else{
+                i++;
+            }
+        }
+
+        }   
     }
-}
+
