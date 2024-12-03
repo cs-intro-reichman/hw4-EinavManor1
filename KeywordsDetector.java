@@ -11,7 +11,7 @@ public class KeywordsDetector {
             "Chatbots are great but must be used carefully",
             "This blockchain-based solution will disrupt the industry",
             "The team showed great Synergy in the last project",
-            "Use simple words without hype and fluff","",
+            "Use simple words without hype and fluff",
             "Our new technology presents a significant paradigm shift",
             "Effective presentations must be clear, concise, and humble"
         };
@@ -28,13 +28,13 @@ public class KeywordsDetector {
             System.out.println("");
             return;
         }
-        while(sentences.length > i){
+        while((sentences.length) > i){
             int counter = 0;
             String testedSentence =sentences[i];
             int j = 0;
             while(keywords.length > j){
-                String checkForKeyWord = keywords[j];
-                if(testedSentence.toLowerCase().contains(checkForKeyWord)){
+                String checkForKeyWord = keywords[j].toLowerCase();
+                if(testedSentence.contains(checkForKeyWord)){
                     counter++;
                 }
                 j++;
