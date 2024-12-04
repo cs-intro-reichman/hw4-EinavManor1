@@ -1,5 +1,7 @@
 
 
+
+
 public class Primes {
     public static void main(String[] args) {
         int max = Integer.parseInt(args[0]);
@@ -15,6 +17,7 @@ public class Primes {
                 if((i % j) == 0){
                     if(i == j){
                         prime =true;
+                        count++;
                         j= max;
                     }else{
                         j = max;
@@ -22,16 +25,15 @@ public class Primes {
                 }
              }
             if(prime == true){
-                count++;
                 System.out.println(i);
                 i++;
             }else{
                 i++;
-            }
-            
-        }
-        int precents = ((count*max)/100);
+        } 
+    }
+        int precents = ((count*100)/max);
         System.out.println("There are "+ count+ " primes between 2 and "+max+" ("+ precents+"% are primes"); 
-        }
+    
     }
         
+}
