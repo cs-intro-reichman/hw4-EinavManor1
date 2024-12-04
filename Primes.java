@@ -32,7 +32,7 @@ public class Primes {
         } 
     }
         int precents = ((count*100)/max);
-        System.out.println("There are "+ count+ " primes between 2 and "+max+" ("+ precents+"% are primes"); 
+        System.out.println("There are "+ count+ " primes between 2 and "+max+" ("+ precents+"% are primes)"); 
     
     }
         
