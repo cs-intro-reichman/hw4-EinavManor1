@@ -30,7 +30,7 @@ public class KeywordsDetector {
         }
         while((sentences.length) > i){
             int counter = 0;
-            String testedSentence =sentences[i];
+            String testedSentence =sentences[i].toLowerCase();
             int j = 0;
             while(keywords.length > j){
                 String checkForKeyWord = keywords[j].toLowerCase();
