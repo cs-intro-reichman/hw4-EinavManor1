@@ -40,7 +40,7 @@ public class KeywordsDetector {
                 j++;
             }
             if(counter > 0){
-                System.out.println(testedSentence);
+                System.out.println(sentences[i]);
                 i++;
             }else{
                 i++;

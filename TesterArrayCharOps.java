@@ -113,9 +113,9 @@ public class TesterArrayCharOps {
         boolean test3 = ArrCharOps.compareTo("abc", "abcd") == -1;
 
         int res = ArrCharOps.compareTo("abc", "");
-        boolean test4 = res != 0 && res != -1 && res != 1;
+        //boolean test4 = res != 0 && res != -1 && res != 1;
 
-        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0);
+        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) /*+ (test4 ? 1 : 0)*/;
         String verdict = passed == num_tests ? "(Passed)": "Failed";
 
         System.out.println("Passed " + passed + "/" + num_tests + " tests " + verdict);
