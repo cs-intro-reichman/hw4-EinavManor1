@@ -197,12 +197,6 @@ public class ArrCharOps {
                 int asciiValue1 = char1; 
                 int asciiValue2 = char2; 
 
-                if(asciiValue1 <= 90){
-                    return 1;
-                }
-                if(asciiValue2 <= 90){
-                    return -1;
-                }
                 if(asciiValue1 > asciiValue2){
                     return 1;
                 }
