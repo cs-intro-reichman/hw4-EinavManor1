@@ -171,7 +171,7 @@ public class ArrCharOps {
      * - "apple" is less than "banana" because 'a' comes before 'b'.
      * - "abc" is less than "abcd" because it is shorter.
      * - "hello" is equal to "hello".
-     * - "date" is greater than "dark" because 't' comes after 'k'.
+     * - "dark" is greater than "date" because 't' comes after 'r'.
      * 
      * @param str1 the first string to compare
      * @param str2 the second string to compare
@@ -181,16 +181,35 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        str1 = str1.toLowerCase();
-        str2 = str2.toLowerCase();
-        if(str1.length() != str2.length()){
-            return 
+        if (str1.length() < str2.length()) {
+            return -1; 
+        } else if (str1.length() > str2.length()) {
+            return 1; 
         }
-        for (int i = 0; i < Math.min(str1.length(), str2.length()); i++) {
-            if (str1.charAt(i) != str2.charAt(i)) {
-                return str1.charAt(i) - str2.charAt(i);
+        if(str1.length() == str2.length()){
+            for (int i = 0; i < str1.length(); i++) {
+                char char1 = str1.charAt(i);
+                char char2 = str2.charAt(i);
+        
+                int asciiValue1 = char1; // ASCII value of char1
+                int asciiValue2 = char2; // ASCII value of char2
+        
+                boolean isUpper1 = asciiValue1 <= 90; 
+                boolean isUpper2 = asciiValue2 <= 90; 
+                if(isUpper1 ==true){
+                    return 1;
+                }else if (isUpper2 == true) {
+                    return -1;
+                }
+                if(asciiValue1 > asciiValue2){
+                    return 1;
+                }else if (asciiValue1 > asciiValue2) {
+                    return -1;
+                }else{
+                    i++;
+                }
             }
-        }
-        return (str1.length() - str2.length());
     }
+    return 0;    
+}
 }

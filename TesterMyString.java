@@ -31,7 +31,7 @@ public class TesterMyString {
         boolean test5 = !MyString.contains("baba yaga", "babayaga");
 
 
-        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0) +
+        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0) + (test4 ? 1 : 0)+
                      (test5 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
 

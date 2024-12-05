@@ -15,7 +15,7 @@ public class MyString {
         System.out.println(contains("psychology", "psycho")); // true
         System.out.println(contains("personality", "son")); // true
         System.out.println(contains("personality", "dad")); // false
-        System.out.println(contains("resignation", "sign")); // true
+        System.out.println(contains("baba yaga", "John Wick is the baba yaga")); // true
     }
 
     /** Returns the lowercase version of the given string. */
@@ -29,7 +29,7 @@ public class MyString {
         if(str1 == null || str2 == null){
             return false;
         }
-        if(str1.contains(str2) || str2.contains(str1)){
+        if(str1.contains(str2)){
             return true;
         }else{
             return false;

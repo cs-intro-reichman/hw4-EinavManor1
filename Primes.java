@@ -8,7 +8,7 @@ public class Primes {
         int i = 2;
         int count = 0;
         System.out.println("Prime numbers up to "+ max +":");
-        while (i < max){
+        while (i <= max){
             Boolean prime = false;
             for(int j = 2; j <= i;){
                 if((i % j) > 0){
