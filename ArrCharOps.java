@@ -181,7 +181,7 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        if (str1 == "" || str2 == "") {
+        if ("".equals(str1) || "".equals(str2)) {
             return -2; 
         }
         if (str1.length() < str2.length()) {
