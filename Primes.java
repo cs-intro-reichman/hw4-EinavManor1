@@ -18,9 +18,9 @@ public class Primes {
                     if(i == j){
                         prime =true;
                         count++;
-                        j= max;
+                        j= max+1;
                     }else{
-                        j = max;
+                        j = max+1;
                     }  
                 }
              }
@@ -31,8 +31,8 @@ public class Primes {
                 i++;
         } 
     }
-        int precents = ((count*100)/max);
-        System.out.println("There are "+ count+ " primes between 2 and "+max+" ("+ precents+"% are primes)"); 
+    int precents = ((count*100)/max);
+    System.out.println("There are "+ count+ " primes between 2 and "+max+" ("+ precents+"% are primes)"); 
     
     }
         
