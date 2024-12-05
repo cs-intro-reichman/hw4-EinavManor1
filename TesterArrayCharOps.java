@@ -109,13 +109,13 @@ public class TesterArrayCharOps {
         System.out.println("Testing 'compareTo':");
 
         boolean test1 = ArrCharOps.compareTo("abc", "abc") == 0;
-        //boolean test2 = ArrCharOps.compareTo("abc", "aBc") == 1;
+        boolean test2 = ArrCharOps.compareTo("abc", "aBc") == 1;
         boolean test3 = ArrCharOps.compareTo("abc", "abcd") == -1;
 
         int res = ArrCharOps.compareTo("abc", "");
         boolean test4 = res != 0 && res != -1 && res != 1;
 
-        int passed = (test1 ? 1 : 0) + /*(test2 ? 1 : 0)*/ + (test3 ? 1 : 0)+ (test4 ? 1 : 0);
+        int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0) + (test3 ? 1 : 0)+ (test4 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "Failed";
 
         System.out.println("Passed " + passed + "/" + num_tests + " tests " + verdict);
