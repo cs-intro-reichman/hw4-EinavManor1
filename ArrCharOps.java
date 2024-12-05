@@ -181,6 +181,9 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
+        if (str1 == "" || str2 == "") {
+            return -2; 
+        }
         if (str1.length() < str2.length()) {
             return -1; 
         } else if (str1.length() > str2.length()) {
@@ -191,22 +194,14 @@ public class ArrCharOps {
                 char char1 = str1.charAt(i);
                 char char2 = str2.charAt(i);
         
-                int asciiValue1 = char1; // ASCII value of char1
-                int asciiValue2 = char2; // ASCII value of char2
-        
-                boolean isUpper1 = asciiValue1 <= 90; 
-                boolean isUpper2 = asciiValue2 <= 90; 
-                if(isUpper1 ==true){
-                    return 1;
-                }else if (isUpper2 == true) {
-                    return -1;
-                }
+                int asciiValue1 = char1; 
+                int asciiValue2 = char2; 
+
                 if(asciiValue1 > asciiValue2){
                     return 1;
-                }else if (asciiValue1 > asciiValue2) {
+                }
+                if (asciiValue1 > asciiValue2) {
                     return -1;
-                }else{
-                    i++;
                 }
             }
     }
